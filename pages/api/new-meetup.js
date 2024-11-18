@@ -1,11 +1,13 @@
 import { MongoClient } from "mongodb";
-import dotenv from 'dotenv';
+import dotenv from "dotenv";
 
-dotenv.config()
+if (process.env.NODE_ENV !== "production") {
+  dotenv.config();
+}
 
-const user=process.env.DB_USERNAME;
-const pass=process.env.DB_PASS;
-console.log(user,pass)
+const user = process.env.DB_USERNAME;
+const pass = process.env.DB_PASS;
+console.log(user, pass);
 export default async function handler(req, res) {
   if (req.method === "POST") {
     const data = req.body;

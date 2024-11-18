@@ -2,7 +2,9 @@ import { MongoClient } from "mongodb";
 import Head from "next/head";
 import dotenv from "dotenv";
 
-dotenv.config();
+if (process.env.NODE_ENV !== "production") {
+  dotenv.config();
+}
 
 const user = process.env.DB_USERNAME;
 const pass = process.env.DB_PASS;
