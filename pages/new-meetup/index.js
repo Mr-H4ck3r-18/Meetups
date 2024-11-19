@@ -17,7 +17,7 @@ export default function NewMeetup() {
 
     const result = await response.json();
     console.log(result);
-    router.push("/");
+    await router.push("/");
   }
   return (
     <Fragment>

@@ -7,7 +7,7 @@ if (process.env.NODE_ENV !== "production") {
 
 const user = process.env.DB_USERNAME;
 const pass = process.env.DB_PASS;
-console.log(user, pass);
+
 export default async function handler(req, res) {
   if (req.method === "POST") {
     const data = req.body;
