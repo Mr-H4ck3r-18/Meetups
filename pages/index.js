@@ -18,7 +18,7 @@ export default function Home(props) {
       <Head>
         <title>Meetups</title>
       </Head>
-      <MeetupList meetups={props.meetups} />;
+      <MeetupList meetups={props.meetups} />
     </Fragment>
   );
 }
